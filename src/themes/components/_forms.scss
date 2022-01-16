@@ -1,0 +1,25 @@
+.form-control {
+  border: 1px solid $default-menu-item;
+  border-radius: 6px;
+  padding: 9px 23px;
+  font-size: 16px;
+   color: $black;
+  &:focus {
+    box-shadow: none;
+    border-color: $default-menu-item;
+  }
+}
+.iti {
+  width: 100% !important;
+}
+
+.dialog-overlay .mat-dialog-container{
+  overflow: overlay !important;
+}
+
+.form-control.is-invalid:focus,
+.form-control.is-invalid:active,
+.form-control.is-invalid {
+  border-color: $red;
+  box-shadow: none !important;
+}

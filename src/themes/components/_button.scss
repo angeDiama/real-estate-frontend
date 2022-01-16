@@ -1,0 +1,68 @@
+.btn-default {
+  border: .5px solid $cancel-btn-bg !important;
+  border-radius: 6px;
+  padding: 10px 20px !important;
+  color: #212121;
+  background: $cancel-btn-bg;
+}
+.btn-outline-filter {
+  border: .5px solid $default-menu-item !important;
+  border-radius: 6px;
+  padding: 3px 16px !important;
+  color: $default-menu-item;
+  background: none;
+  &:hover {
+  //  background: $admin-navbar-bg;
+  }
+
+  .feather {
+    width: 22px !important;
+    height: 22px !important;
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.btn-add-primary {
+  background: $primary;
+  box-shadow: 1px 3px 10px #00000029 !important;
+  border-radius: 8px;
+  padding: 8px 20px;
+  color: $white;
+
+  &:hover {
+    background: lighten($primary, 5%) ;
+    color: $white;
+  }
+}
+
+.btn-add-secondary {
+  background: $secondary;
+  box-shadow: 1px 3px 10px #00000029;
+  border-radius: 8px;
+  padding: 8px 20px;
+  color: $white;
+
+  &:hover {
+    background: lighten($secondary, 5%) ;
+    color: $white;
+  }
+}
+
+.btn-cancel {
+  background: $cancel-btn-bg;
+  border-radius: 8px;
+  padding: 8px;
+  color: $black;
+}
+.btn-delete {
+  background: $delete-bg;
+  border-radius: 8px;
+  padding: 8px 20px;
+  color: $white;
+  &:hover {
+    background: lighten($delete-bg, 15%) ;
+    color: $white;
+  }
+}

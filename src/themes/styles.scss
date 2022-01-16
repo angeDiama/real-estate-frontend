@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+@import '~compass-mixins/lib/compass';
+@import '~compass-mixins/lib/animate';
+// utils
+@import "utils/variables";
+
+// SCSS compass funtions
+@import "utils/mixin/animations";
+@import "utils/functions/functions";
+@import "utils/mixin/breakpoints";
+
+// bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+
+// base
+@import "base/base";
+@import "base/utilities";
+
+
+// components
+@import "components/input-search";
+@import "components/button";
+@import "components/mat-table";
+@import "components/forms";
+@import "components/modal";
+
+
+
+// layout
+@import "layouts/admin/base-wrapper";
+@import "layouts/admin/sidebar";
+@import "layouts/admin/layouts";
+@import "layouts/admin/navbar";
+@import "layouts/admin/footer";
