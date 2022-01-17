@@ -9,7 +9,9 @@ import {NgProgressHttpModule} from "ngx-progressbar/http";
 import {HttpClientModule} from "@angular/common/http";
 import {registerLocaleData} from "@angular/common";
 import localeFr from '@angular/common/locales/fr';
-import {LayoutModule} from "./views/layout/layout.module";
+import {LayoutModule} from "@views/layout/layout.module";
+import {SharedModule} from "@shared/shared.module";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 
@@ -32,7 +34,9 @@ registerLocaleData(localeFr, 'fr');
     BrowserAnimationsModule,
     NgProgressHttpModule,
     HttpClientModule,
-    LayoutModule
+    LayoutModule,
+    NgbModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
