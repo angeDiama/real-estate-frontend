@@ -17,7 +17,6 @@ import {BehaviorService} from "@core/services/behavior/behavior.service";
 export class ShowPropertyComponent implements OnInit, OnDestroy {
   propertyId!: number;
   currentProperty!: PropertyModel;
-  propertyPicture!: string;
   private _destroy$ = new Subject();
   constructor(
     private propertyService: PropertyService,
