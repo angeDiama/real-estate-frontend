@@ -8,6 +8,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {AddPropertyComponent} from "@views/properties/add-property/add-property.component";
 import {DeletePropertyComponent} from "@views/properties/delete-property/delete-property.component";
 import {BehaviorService} from "@core/services/behavior/behavior.service";
+import {PropertyModel} from "@views/properties/model/property.model";
 
 @Component({
   selector: 'app-properties-list',
@@ -16,7 +17,7 @@ import {BehaviorService} from "@core/services/behavior/behavior.service";
 })
 export class PropertiesListComponent implements OnInit {
   displayedColumns: string[] = ['picture','title', 'description', 'createdAt', 'actions'];
-  dataSource = new MatTableDataSource<any>();
+  dataSource = new MatTableDataSource<PropertyModel>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(
@@ -42,7 +43,7 @@ export class PropertiesListComponent implements OnInit {
       .pipe(first())
       .subscribe((res: any) => {
         this.dataSource.data = res.data;
-        this.dataSource.data.forEach(elem => {
+        this.dataSource.data.forEach((elem: any) => {
           if(elem.urlPicture.includes('http://localhost:3000/')) {
           return elem.urlPicture;
           } else {
@@ -50,7 +51,6 @@ export class PropertiesListComponent implements OnInit {
           }
 
         })
-        console.log('data',this.dataSource.data)
         this.dataSource.paginator = this.paginator;
         this.dataSource.filterPredicate = (data, filter) => {
           return  data?.id?.toLowerCase()?.includes(filter) ||

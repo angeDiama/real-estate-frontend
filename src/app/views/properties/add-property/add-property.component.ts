@@ -75,7 +75,6 @@ export class AddPropertyComponent implements OnInit, AfterViewInit {
           this.behaviorService.updateData(true);
         },
         error => {
-          console.log(error)
           const violations = error?.message;
           this.handleHttpFormErrors(this.propertyForm, violations);
         }
