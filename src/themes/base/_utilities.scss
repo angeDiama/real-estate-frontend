@@ -1,0 +1,27 @@
+@for $i from 1 through 100 {
+  .w-#{$i} {
+    width: $i * 1% !important;
+  }
+}
+
+@for $i from 1 through 100 {
+  .left-#{$i} {
+    left: $i * 1vw !important;
+  }
+  .bottom-#{$i} {
+    bottom: $i * 1px !important;
+  }
+  .h-#{$i} {
+    height: 100vh !important;
+  }
+  .font-#{$i} {
+    font-size: $i * 1px !important;
+  }
+  .feather-#{$i} {
+    width: $i * 1px !important;
+    height: $i * 1px !important;
+  }
+  .rad-#{$i} {
+    border-radius: $i * 1px !important;
+  }
+}

@@ -1,0 +1,69 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  font-family: $global-font;
+}
+%property-link {
+  text-decoration: none;
+  outline: 0 !important;
+  border: none;
+  box-shadow: none;
+}
+
+%link {
+  @extend %property-link;
+
+  &:hover {
+    @extend %property-link;
+  }
+
+  &:focus {
+    @extend %property-link;
+  }
+
+  &:active {
+    @extend %property-link;
+  }
+
+  &:visited {
+    @extend %property-link;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+a {
+  @extend %link;
+}
+
+button.mat-button {
+  @extend %link;
+}
+
+button {
+  @extend %link;
+}
+button.btn{
+  @extend %link;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

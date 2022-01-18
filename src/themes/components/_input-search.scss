@@ -1,0 +1,30 @@
+.search {
+  border-radius: 10px;
+  @media screen and (min-width: 1800px) {
+  //  width: 50% !important;
+  }
+  .input-group-text {
+    border: 1px solid $default-menu-item;
+    border-radius: 10px;
+    background: none;
+    .feather {
+      width: 25px !important;
+      height: 25px !important;
+      color: $default-menu-item;
+    }
+  }
+  .form-control {
+    border: 1px solid $default-menu-item;
+    border-left: none;
+    border-radius: 10px;
+    padding: 10px 3px;
+    font-size: 15px;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    width: 100% !important;
+  }
+}
+

@@ -1,0 +1,18 @@
+.modal-lg {
+  max-width: 600px !important;
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    max-width: 500px !important;
+  }
+}
+
+.modal-xl {
+  max-width: 760px !important;
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    max-width: 500px !important;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+

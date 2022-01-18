@@ -1,0 +1,65 @@
+$primary: #43A325;
+$secondary: #009BDD;
+$light: #7B7C7C;
+$white: #FFFFFF;
+$cancel-btn-bg: #EEEEEE;
+$delete-bg: #FF0000;
+$black: #000000;
+$title-bg: #111111;
+$input-color: #7B7C7C;
+$default-menu-item: #B3B1B2;
+$login-text: #111111;
+$admin-dash-bg: #003E58;
+$admin-navbar-bg: #F2F2F2;
+$dash-title: #ADB5BD;
+$switch-on-bg: #C6E3BD;
+$switch-off-bg: #E4E4E4;
+
+// fonts
+$global-font: "Roboto";
+$default-font-size: .875rem;
+$content-bg: #F7F6F4;
+$border-color: #e8ebf1;
+$action-transition-duration: 0.2s;
+$action-transition-timing-function: ease;
+
+
+
+$theme-colors: (
+  primary:         #43A325,
+  secondary:     #009BDD,
+  input-color:     #7B7C7C,
+);
+
+$breakpoints: (
+  mobile: 599px,
+  normal-screen: 1200px,
+  large-screen: 1400px,
+  desktop: 1700px,
+  large-desktop: 1900px
+);
+
+
+// Content-nav
+$content-nav-width: 220px;
+
+// Sidebar
+$sidebar-light-bg: $white;
+$sidebar-light-border-color: #f2f4f9;
+
+$sidebar-dark-bg: #0c1427;
+$sidebar-dark-border-color: #344258;
+
+$sidebar-width-lg: 270px;
+$sidebar-folded-width: 70px;
+// Sidebar
+
+// Navbar
+$navbar-height: 140px;
+// Navbar
+
+
+// Footer
+$footer-height: 75px;
+$footer-bg: $content-bg;
+$footer-color: color(dark);

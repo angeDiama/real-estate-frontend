@@ -1,0 +1,80 @@
+.form-control {
+  border: 1px solid $default-menu-item;
+  border-radius: 6px;
+  padding: 9px 23px;
+  font-size: 16px;
+   color: $black;
+  &:focus {
+    box-shadow: none;
+    border-color: $default-menu-item;
+  }
+}
+.iti {
+  width: 100% !important;
+}
+
+.dialog-overlay .mat-dialog-container{
+  overflow: overlay !important;
+}
+
+.form-control.is-invalid:focus,
+.form-control.is-invalid:active,
+.form-control.is-invalid {
+  border-color: $red;
+  box-shadow: none !important;
+}
+
+%file-label-property {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition-duration: 300ms;
+  color: rgba(0, 0, 0, 0.4);
+  background: $default-menu-item;
+
+  &:hover,
+  &.has-file {
+    border: 1px dashed rgba(0, 0, 0, 0.5);
+    // border-color: $primary;
+    color: $primary;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+}
+
+.identityFile-label,
+.licenseFile-label,
+.imageFile-label {
+  @extend %file-label-property;
+}
+
+.cancel-img {
+  mark {
+    padding-top: 10px;
+    cursor: pointer;
+    background: #faddc9;
+    border-radius: 5px;
+    position: relative;
+    top: 11px;
+    &:hover {
+      background: darken(#faddc9, 10%);
+    }
+  }
+
+  mat-icon {
+    font-size: 15px;
+    color: $red;
+  }
+
+  span {
+    bottom: 2px;
+    right: 3px;
+    position: relative;
+  }
+}
+
+

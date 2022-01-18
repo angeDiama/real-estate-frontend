@@ -1,0 +1,27 @@
+.auth-login {
+  background: url('/assets/images/login-bg.png') center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  z-index: 0;
+  &__form {
+    background-color: rgba(255, 255, 255, .75);
+    font-weight: 400;
+    z-index: 999;
+    box-shadow: 2px 1px 3px #00000029;
+    border-radius: 20px;
+    @media screen and (max-width: 600px) {
+      border-radius: 10px;
+    }
+    .title {
+      color: $title-bg;
+    }
+    .login-btn {
+      border-radius: 10px;
+      padding: 12px 0;
+      box-shadow: 1px 3px 10px #00000029 !important;
+      @media screen and (max-width: 600px) {
+        border-radius: 6px;
+      }
+    }
+  }
+}

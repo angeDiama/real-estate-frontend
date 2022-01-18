@@ -1,0 +1,35 @@
+<div class="sidebar-dark">
+  <nav class="sidebar">
+    <div class="sidebar-header text-center">
+      <!--- Logo -->
+      <a routerLink="/" class="sidebar-brand">
+        <img class='text-center' src="assets/images/logo-cnam.png" alt="logo"/>
+      </a>
+
+      <!--- Toggler -->
+
+      <div class='sidebar-toggler d-lg-none d-inline not-active text-right cursor-pointer'  #sidebarToggler (click)="toggleSidebar($event)">
+        <span data-feather="chevron-left" appFeatherIcon></span>
+      </div>
+    </div>
+
+    <div class="sidebar-body" (mouseenter)="openSidebarFolded()" (mouseleave)="closeSidebarFolded()">
+
+      <!--- Sidemenu start -->
+
+      <ul class="sidebar-nav p-md-0 metismenu" id="sidebar-menu" #sidebarMenu>
+        <ng-container *ngFor="let item of menuItems">
+          <li class="nav-item mb-4 px-5 py-1" >
+            <a class="nav-link nav-link-ref" [routerLink]="item?.link"
+               [attr.data-parent]="item?.parentId">
+              <i class="link-icon text-white" [attr.class]="item?.icon"></i>
+              <span class="link-title"> {{ item?.label }}</span>
+            </a>
+          </li>
+        </ng-container>
+      </ul>
+
+      <!--- Sidemenu end -->
+    </div>
+  </nav>
+</div>
