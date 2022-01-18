@@ -27,6 +27,7 @@ yarn-error.log*
 .prettierrc
 
 .idea/
+.angular/
 .docz
 # IDE - VSCode
 # IDE - VSCode
