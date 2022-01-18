@@ -4,6 +4,7 @@ import {BehaviorService} from "@core/services/behavior/behavior.service";
 import {ToasterService} from "@shared/services/toaster-display/toaster.service";
 import {PropertyService} from "@views/properties/services/property.service";
 import {first} from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-delete-property',
@@ -16,6 +17,7 @@ export class DeletePropertyComponent implements OnInit {
   constructor(
     public activeModal: NgbActiveModal,
     private propertyService: PropertyService,
+    private router: Router,
     private toasterService: ToasterService,
     private behaviorService: BehaviorService
   ) { }
@@ -31,6 +33,7 @@ export class DeletePropertyComponent implements OnInit {
         this.activeModal.close('close modal');
         this.behaviorService.updateData(true);
         this.toasterService.show('success','Annonce suprimé');
+        this.router.navigate(['/annonces'])
       })
   }
 

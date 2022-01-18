@@ -1,1 +1,26 @@
-<p>show-property works!</p>
+<div class='row details'>
+  <div class='col pb-3'>
+    <div class='card'>
+      <div class='card-body text-center p-0'>
+        <h6 class='card-title p-3 mb-3 border-bottom mx-0'>Annonce</h6>
+        <div class='ps-3'>
+          <h6 class='card-subtitle py-2'>Image descriptif</h6>
+          <p class='card-text mb-5'><img [src]="currentProperty?.urlPicture" alt=""></p>
+
+          <h6 class='card-subtitle py-2'>Titre</h6>
+          <p class='card-text mb-3'>{{currentProperty?.title}}</p>
+
+          <h6 class='card-subtitle py-2'>Description</h6>
+          <p class='card-text mb-3'>{{currentProperty?.description}}</p>
+
+          <h6 class='card-subtitle py-2'>Date de creation</h6>
+          <p class='card-text mb-5'>{{currentProperty?.createdAt | date: 'short':undefined: 'fr'}}</p>
+          <div class='my-4 text-center'>
+            <button (click)="editProperty(currentProperty)" class='btn btn-add-secondary'>Modifier <i class='ms-1 fa fa-pencil'></i></button>
+            <button (click)="deleteProperty(currentProperty)" class='btn btn-delete px-4 ms-4'>Supprimer <i class='ms-1 fa fa-trash'></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
