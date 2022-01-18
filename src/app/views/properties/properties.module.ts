@@ -7,7 +7,12 @@ import { ShowPropertyComponent } from './show-property/show-property.component';
 import { AddPropertyComponent } from './add-property/add-property.component';
 import { DeletePropertyComponent } from './delete-property/delete-property.component';
 import {MatTableModule} from "@angular/material/table";
-import {FeahterIconModule} from "../../core/directives/feather-icon/feather-icon.module";
+import {NgbTooltipModule} from "@ng-bootstrap/ng-bootstrap";
+import {FeahterIconModule} from "@core/directives/feather-icon/feather-icon.module";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {SharedModule} from "@shared/shared.module";
+import {MatIconModule} from "@angular/material/icon";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -21,7 +26,12 @@ import {FeahterIconModule} from "../../core/directives/feather-icon/feather-icon
     CommonModule,
     PropertiesRoutingModule,
     MatTableModule,
-    FeahterIconModule
+    FeahterIconModule,
+    SharedModule,
+    NgbTooltipModule,
+    MatPaginatorModule,
+    MatIconModule,
+    ReactiveFormsModule
   ]
 })
 export class PropertiesModule { }

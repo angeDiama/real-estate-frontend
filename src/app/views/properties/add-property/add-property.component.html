@@ -1,1 +1,65 @@
-<p>add-property works!</p>
+<div class='modal-header'>
+  <h5 class='fs-5 mx-md-3'>{{title}}</h5>
+  <div (click)="activeModal.dismiss('Cross click')" class='cursor-pointer'>
+    <i data-feather='x' appFeatherIcon></i>
+  </div>
+</div>
+<form [formGroup]="propertyForm" (ngSubmit)="onSubmit()">
+  <div class='modal-body'>
+    <div class="row">
+      <div class="col-md-4">
+        <label
+          for="file1"
+          class="identityFile-label position p-2"
+        >
+         <span *ngIf="!propertyId" [innerHtml]="identityFilename ? identityFilename.name : 'Charger l\'image'">
+              </span>
+          <span *ngIf="propertyId" [innerHtml]="identityFilename ? identityFilename.name : 'Modifier l\'image'">
+              </span>
+          <input
+            type="file"
+            id="file1"
+            class="form-control"
+            (change)="identityUpload($event.target.files)"
+            accept=".png,.jpg,.jpeg"
+          />
+        </label>
+      </div>
+      <div class="col-md-4 cancel-img" *ngIf="identityFilename">
+        <mark>
+          <mat-icon>cancel</mat-icon>
+          <span (click)="removeImg()">Retirer l'image</span>
+        </mark>
+      </div>
+    </div>
+    <div class='mx-md-3 mt-2'>
+      <div class='form-row'>
+        <div class='form-group col mb-4'>
+          <label for='lastname' class='mb-2'>Titre</label>
+          <input type='text' formControlName='title' placeholder='Entrer le nom' class='form-control' id='lastname'
+                 [class.is-invalid]="!!propertyForm.get('title')?.errors && isSubmitted">
+          <span class="text-danger" *ngIf="propertyForm.get('title')?.hasError('httpError')">
+            {{'*' + propertyForm.get('title')!.getError('httpError')}}
+          </span>
+          <span class="text-danger" *ngIf="propertyForm.get('title')?.hasError('required') && isSubmitted">
+        *Veuillez saisir un titre svp
+      </span>
+        </div>
+      </div>
+      <div class='form-row'>
+        <div class='form-group col mb-4'>
+          <label for='description' class='mb-2'>Description</label>
+          <textarea
+            formControlName='description' placeholder='Description' class='form-control' id='description'
+            rows='2'>
+          </textarea>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class='modal-footer'>
+    <button (click)="activeModal.close('Close click')" type='button' class='btn btn-cancel w-20'>Fermer</button>
+    <button type='submit' class='btn btn-add-primary w-20 ms-3'>{{btnTitle}}</button>
+  </div>
+</form>

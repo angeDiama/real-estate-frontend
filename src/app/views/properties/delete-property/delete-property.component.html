@@ -1,1 +1,18 @@
-<p>delete-property works!</p>
+<div class='modal-header'>
+  <h5 class='fs-5 mx-md-3'>Supprimer l'annonce</h5>
+  <div (click)="activeModal.dismiss('Cross click')" class='cursor-pointer'>
+    <i data-feather='x' appFeatherIcon></i>
+  </div>
+</div>
+<div class="modal-body">
+  <div class="alert alert-danger rad-6" role="alert">
+    <span><i class="fa fa-exclamation-triangle"></i></span>
+    <small class="ms-2">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    </small>
+  </div>
+</div>
+<div class="modal-footer">
+  <button (click)="activeModal.close('Close click')" type='button' class='btn btn-cancel w-20'>Fermer</button>
+  <button (click)='deleteAdvertisement()' type='button' class='btn btn-delete w-20 ms-3'>Supprimer</button>
+</div>

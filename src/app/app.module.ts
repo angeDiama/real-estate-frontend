@@ -12,6 +12,7 @@ import localeFr from '@angular/common/locales/fr';
 import {LayoutModule} from "@views/layout/layout.module";
 import {SharedModule} from "@shared/shared.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -36,7 +37,9 @@ registerLocaleData(localeFr, 'fr');
     HttpClientModule,
     LayoutModule,
     NgbModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
